@@ -148,9 +148,21 @@ const wishlistItems = document.getElementById("wishlistItems");
 
 window.addEventListener("load", () => {
 
+  const loader = document.getElementById("loader");
+
+  if (!loader) return;
+
   setTimeout(() => {
-    document.getElementById("loader").classList.add("hide");
-  }, 900);
+
+    loader.style.transition = "opacity 0.7s ease";
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 700);
+
+  }, 1200);
 
 });
 
