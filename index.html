@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LEWO — Wear Your Voice</title>
+  <meta
+    name="description"
+    content="LEWO Men’s Wear — Premium contemporary menswear. Wear your voice."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">LEWO</div>
+    <div class="loader-line"></div>
+    <span>WEAR YOUR VOICE.</span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+
+    <a href="#" class="logo">
+      <span>LEWO</span>
+      <small>MEN'S WEAR</small>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#new">New Drop</a>
+      <a href="#collections">Collections</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button onclick="openSearch()" aria-label="Search">⌕</button>
+      <button onclick="openWishlist()" aria-label="Wishlist">
+        ♡ <span class="count" id="wishlistCount">0</span>
+      </button>
+      <button onclick="openCart()" aria-label="Cart">
+        🛒 <span class="count" id="cartCount">0</span>
+      </button>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" onclick="toggleMenu()">×</button>
+
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#new" onclick="toggleMenu()">New Drop</a>
+    <a href="#collections" onclick="toggleMenu()">Collections</a>
+    <a href="#shop" onclick="toggleMenu()">Shop</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">LEWO / NEW COLLECTION 2026</p>
+
+        <h1>
+          WEAR<br>
+          YOUR <em>VOICE.</em>
+        </h1>
+
+        <p class="hero-description">
+          Premium menswear for those who don't dress to fit in.
+          Designed for confidence, comfort and individuality.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-dark">SHOP THE DROP</a>
+          <a href="#collections" class="btn btn-outline">EXPLORE</a>
+        </div>
+
+      </div>
+
+      <div class="hero-visual">
+
+        <div class="hero-card">
+          <div class="hero-placeholder">
+            <span>LEWO</span>
+            <small>YOUR IMAGE HERE</small>
+          </div>
+        </div>
+
+        <div class="floating-card">
+          <strong>01</strong>
+          <span>LIMITED<br>DROP</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TICKER -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>WEAR YOUR VOICE</span>
+        <b>✦</b>
+        <span>PREMIUM MENSWEAR</span>
+        <b>✦</b>
+        <span>BUILT DIFFERENT</span>
+        <b>✦</b>
+        <span>LEWO</span>
+        <b>✦</b>
+        <span>WEAR YOUR VOICE</span>
+        <b>✦</b>
+        <span>PREMIUM MENSWEAR</span>
+      </div>
+    </div>
+
+
+    <!-- NEW DROP -->
+    <section class="section" id="new">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / THE LATEST</p>
+          <h2>New <em>Drop.</em></h2>
+        </div>
+
+        <a href="#shop" class="text-link">View all →</a>
+      </div>
+
+      <div class="featured-grid">
+
+        <article class="featured-card large">
+          <div class="featured-image image-one">
+            <span>LEWO</span>
+          </div>
+
+          <div class="featured-info">
+            <div>
+              <small>NEW ARRIVAL</small>
+              <h3>Essential Oversized Tee</h3>
+            </div>
+            <strong>₹899</strong>
+          </div>
+        </article>
+
+        <article class="featured-card">
+          <div class="featured-image image-two">
+            <span>LEWO</span>
+          </div>
+
+          <div class="featured-info">
+            <div>
+              <small>LIMITED</small>
+              <h3>Urban Relaxed Shirt</h3>
+            </div>
+            <strong>₹1,299</strong>
+          </div>
+        </article>
+
+        <article class="featured-card">
+          <div class="featured-image image-three">
+            <span>LEWO</span>
+          </div>
+
+          <div class="featured-info">
+            <div>
+              <small>ESSENTIAL</small>
+              <h3>Everyday Straight Fit</h3>
+            </div>
+            <strong>₹1,199</strong>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- COLLECTIONS -->
+    <section class="section collections-section" id="collections">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / EXPLORE</p>
+          <h2>Built for <em>you.</em></h2>
+        </div>
+      </div>
+
+      <div class="category-grid">
+
+        <button class="category-card" onclick="filterProducts('T-Shirts')">
+          <span>01</span>
+          <h3>T-Shirts</h3>
+          <p>Everyday essentials</p>
+        </button>
+
+        <button class="category-card" onclick="filterProducts('Shirts')">
+          <span>02</span>
+          <h3>Shirts</h3>
+          <p>Clean. Confident.</p>
+        </button>
+
+        <button class="category-card" onclick="filterProducts('Bottoms')">
+          <span>03</span>
+          <h3>Bottoms</h3>
+          <p>Move your way</p>
+        </button>
+
+        <button class="category-card" onclick="filterProducts('Layers')">
+          <span>04</span>
+          <h3>Layers</h3>
+          <p>Made for impact</p>
+        </button>
+
+        <button class="category-card" onclick="filterProducts('Essentials')">
+          <span>05</span>
+          <h3>Essentials</h3>
+          <p>Less. But better.</p>
+        </button>
+
+        <button class="category-card dark" onclick="filterProducts('All')">
+          <span>06</span>
+          <h3>All LEWO</h3>
+          <p>Explore everything →</p>
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- SHOP -->
+    <section class="section shop-section" id="shop">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 / SHOP LEWO</p>
+          <h2>Find your <em>fit.</em></h2>
+        </div>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="active" onclick="filterProducts('All', this)">All</button>
+        <button onclick="filterProducts('T-Shirts', this)">T-Shirts</button>
+        <button onclick="filterProducts('Shirts', this)">Shirts</button>
+        <button onclick="filterProducts('Bottoms', this)">Bottoms</button>
+        <button onclick="filterProducts('Layers', this)">Layers</button>
+        <button onclick="filterProducts('Essentials', this)">Essentials</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+
+    </section>
+
+
+    <!-- AI STYLE -->
+    <section class="ai-section">
+
+      <div class="ai-content">
+
+        <p class="eyebrow">LEWO INTELLIGENCE</p>
+
+        <h2>
+          Don't know<br>
+          what to <em>wear?</em>
+        </h2>
+
+        <p>
+          Tell LEWO your occasion, vibe and preference.
+          We'll help you find your look.
+        </p>
+
+        <button class="btn btn-light" onclick="openStyleAssistant()">
+          FIND MY STYLE →
+        </button>
+
+      </div>
+
+      <div class="ai-visual">
+        <div class="ai-circle">
+          <span>AI</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- PROMISE -->
+    <section class="section promise-section">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 / THE LEWO STANDARD</p>
+          <h2>More than <em>clothes.</em></h2>
+        </div>
+      </div>
+
+      <div class="promise-grid">
+
+        <div>
+          <span>01</span>
+          <h3>Premium Quality</h3>
+          <p>Fabric and finishing chosen to feel as good as they look.</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <h3>Easy Exchange</h3>
+          <p>Wrong fit? We make the exchange process simple.</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <h3>Fast Delivery</h3>
+          <p>Quick and reliable delivery for every LEWO order.</p>
+        </div>
+
+        <div>
+          <span>04</span>
+          <h3>Real Support</h3>
+          <p>Need help choosing? Talk to the LEWO team directly.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- BRAND STATEMENT -->
+    <section class="statement">
+
+      <p>THIS IS NOT ABOUT FOLLOWING TRENDS.</p>
+
+      <h2>
+        YOUR STYLE.<br>
+        YOUR <em>VOICE.</em>
+      </h2>
+
+      <span>LEWO MEN'S WEAR</span>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+
+      <div>
+        <p class="eyebrow">05 / CONNECT</p>
+        <h2>Let's talk <em>style.</em></h2>
+      </div>
+
+      <div class="contact-links">
+        <a href="https://instagram.com/" target="_blank">Instagram ↗</a>
+        <a href="https://wa.me/" target="_blank">WhatsApp ↗</a>
+        <a href="mailto:hello@lewo.in">Email ↗</a>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- SEARCH -->
+  <div class="overlay" id="searchOverlay">
+
+    <button class="overlay-close" onclick="closeSearch()">×</button>
+
+    <div class="search-box">
+
+      <p class="eyebrow">SEARCH LEWO</p>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search T-shirts, shirts, jeans..."
+        oninput="searchProducts()"
+      />
+
+      <div id="searchResults"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- CART -->
+  <aside class="side-panel" id="cartPanel">
+
+    <div class="panel-header">
+      <h2>Your Cart</h2>
+      <button onclick="closeCart()">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-bottom">
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+
+      <button class="btn btn-dark full" onclick="openCheckout()">
+        CHECKOUT →
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- WISHLIST -->
+  <aside class="side-panel" id="wishlistPanel">
+
+    <div class="panel-header">
+      <h2>Wishlist</h2>
+      <button onclick="closeWishlist()">×</button>
+    </div>
+
+    <div id="wishlistItems" class="cart-items"></div>
+
+  </aside>
+
+
+  <!-- CHECKOUT -->
+  <div class="modal" id="checkoutModal">
+
+    <div class="modal-box">
+
+      <button class="modal-close" onclick="closeCheckout()">×</button>
+
+      <p class="eyebrow">LEWO CHECKOUT</p>
+      <h2>Complete your <em>order.</em></h2>
+
+      <form onsubmit="placeOrder(event)">
+
+        <input id="customerName" required placeholder="Full Name">
+        <input id="customerPhone" required placeholder="Phone Number">
+        <input id="customerPincode" required placeholder="Pincode">
+
+        <textarea id="customerAddress" required placeholder="Full Address"></textarea>
+
+        <input id="customerCity" required placeholder="City">
+
+        <select id="paymentMethod">
+          <option value="UPI">UPI</option>
+          <option value="COD">Cash on Delivery</option>
+        </select>
+
+        <button class="btn btn-dark full" type="submit">
+          PLACE ORDER →
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- STYLE ASSISTANT -->
+  <div class="modal" id="styleModal">
+
+    <div class="modal-box style-box">
+
+      <button class="modal-close" onclick="closeStyleAssistant()">×</button>
+
+      <p class="eyebrow">LEWO STYLE ASSISTANT</p>
+
+      <h2>What's your <em>vibe?</em></h2>
+
+      <div class="style-options">
+
+        <button onclick="styleResult('Casual')">CASUAL</button>
+        <button onclick="styleResult('Street')">STREET</button>
+        <button onclick="styleResult('Smart')">SMART</button>
+        <button onclick="styleResult('Minimal')">MINIMAL</button>
+
+      </div>
+
+      <div id="styleResult"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+
+  <footer>
+
+    <div class="footer-logo">LEWO</div>
+
+    <p>WEAR YOUR VOICE.</p>
+
+    <small>© 2026 LEWO MEN'S WEAR. All rights reserved.</small>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
